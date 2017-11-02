@@ -26,15 +26,21 @@ A total of 17339 datasets were collected using the Simulator.
 **Data Augmentation**
 
 The following techniques were used to augment the dataset. 
-1. Used the left and right images from the dataset to train the recovery driving scenario. The dataset recorded from the simulator would have steering angle for the left and right images as to the one corresponding the center image. So, for every left image, the new steering angle is adjusted by +0.2 and for every right image the new steering angle is adjusted ny -0.2.
+Used the left and right images from the dataset to train the recovery driving scenario. The dataset recorded from the simulator would have steering angle for the left and right images as to the one corresponding the center image. So, for every left image, the new steering angle is adjusted by +0.2 and for every right image the new steering angle is adjusted ny -0.2.
 
+Center image
 ![image3](./misc/center.JPG "Center Image" )
+
+Left image
 ![image4](./misc/left.JPG "Left Image" )
+
+Right image
 ![image5](./misc/right.JPG "Right Image") 
 
 
-2. The center, left and right images were flipped horizontally to further augment the data. The steering angle for the flipped images were set to be the negative of the non flipped images.
+The center, left and right images were flipped horizontally to further augment the data. The steering angle for the flipped images were set to be the negative of the non flipped images.
 
+Flipped image
 ![image6](./misc/flip.JPG "Flipped Image" )
 
 The data augmentation resulted in creating a total of 104034 datasets.
