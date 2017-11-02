@@ -67,6 +67,7 @@ The neural network was implemented using the Keras API on top of TensorFlow. The
 ![image9](./misc/modelarch.JPG "Model Architecture")
 
 **Model training parameters**
+
 The neural network described above was trained using the following parameters:
 
 Number of epochs: 5
@@ -89,17 +90,20 @@ I drove around the simulator track (center lane driving) for 8 laps in clockwise
 I used the history object of model.generator() to output a plot showing how the training loss and validation loss changed with the epochs.
 
 **Using the Neural Network to drive the car**
+
 The python code that predicts the steering angles and drive the car is implemented in drive.py. The template for this file was provided by Udacity. It loads the trained neural network model from disk (model.h5) and uses the images provided by the simulator (which is connected to drive.py using a socket) to predict the steering angle. The implementation in drive.py also has to provide a throttle for the simulator, otherwise the car would not move. The speed was set to a constant 9.0.
 
 I added the preprocessing step - resizing the 160x320 image to 100x200 image in the drive.py python code, so that the model is tested on the same image dimensions as the training set.
 
 **Conclusion**
+
 This project shows how to use a deep learning neural network to teach a car how to drive itself. After training the network using data from one track 1, the car was able to drive itself meeting the UDACITY specification - "No tire may leave the drivable portion of the track surface. The car may not pop up onto ledges or roll over any surfaces that would otherwise be considered unsafe (if humans were in the vehicle)."
 
 Future updates could include training the model on the second track and using the data set from track1 along with track2 to generalize the model and use the network to drive track2 without any mistakes. A variable throttle function can also be implemented to set the speed of the car while drving autonomously.
  
 ---
 **Quick Run**
+
 The project includes the following files:
 * model.py containing the script to create and train the model
 * drive.py for driving the car in autonomous mode
