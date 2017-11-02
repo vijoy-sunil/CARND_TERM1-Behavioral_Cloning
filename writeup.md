@@ -28,19 +28,23 @@ A total of 17339 datasets were collected using the Simulator.
 The following techniques were used to augment the dataset. 
 Used the left and right images from the dataset to train the recovery driving scenario. The dataset recorded from the simulator would have steering angle for the left and right images as to the one corresponding the center image. So, for every left image, the new steering angle is adjusted by +0.2 and for every right image the new steering angle is adjusted ny -0.2.
 
-Center image
+Center image:
+
 ![image3](./misc/center.JPG "Center Image" )
 
-Left image
+Left image:
+
 ![image4](./misc/left.JPG "Left Image" )
 
-Right image
+Right image:
+
 ![image5](./misc/right.JPG "Right Image") 
 
 
 The center, left and right images were flipped horizontally to further augment the data. The steering angle for the flipped images were set to be the negative of the non flipped images.
 
-Flipped image
+Flipped image:
+
 ![image6](./misc/flip.JPG "Flipped Image" )
 
 The data augmentation resulted in creating a total of 104034 datasets.
@@ -73,6 +77,7 @@ Generator: I used a data generator for Keras. The purpose is to avoid having all
 Once the network is trained the model is saved to disk (model.json and model.h5) so that drive.py can load it and use it for predicting steering angles.
 
 **Attempts to reduce overfitting in the model**
+
 The validation loss was found to decrease throughout the 5 epochs and no oscillations were observed(signs of overfitting). So no dropout layers are implemented in this project. Limiting the epochs to 5 helped the model from overfitting.
 
 **Training and Validation Set**
