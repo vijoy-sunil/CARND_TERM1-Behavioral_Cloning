@@ -51,7 +51,7 @@ The data augmentation resulted in creating a total of 104034 datasets.
 
 **Data Preprocessing**
 
-The preprocessing step consistes of resizing the images from 160x320 to 100x200 followed bu converting the BGR image that tensor flow reads in to RGB image. In addition to this step, the images are normalized by dividing the image data by 255.0 and subtracting 0.5 from it. The mean normalization step (to avoid saturation and make gradients work better) and the cropping of the image to remove the sky and hood of the car from the image is part of the network model. (Layer 1 and 2)
+The preprocessing step consistes of resizing the images from 160x320 to 100x200 followed by converting the BGR image that tensor flow reads in to RGB image. In addition to this step, the images are normalized by dividing the image data by 255.0 and subtracting 0.5 from it. The mean normalization step (to avoid saturation and make gradients work better) and the cropping of the image to remove the sky and hood of the car from the image is part of the network model. (Layer 1 and 2)
 
 ![image7](./misc/beforecrop.JPG) 
 ![image8](./misc/aftercrop.JPG) 
