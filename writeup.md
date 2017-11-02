@@ -71,10 +71,15 @@ The neural network was implemented using the Keras API on top of TensorFlow. The
 The neural network described above was trained using the following parameters:
 
 Number of epochs: 5
+
 Batch size: 32
+
 Optimizer: Adam, learning rate: default 1e-3
+
 Validation split: 20% of the dataset.
+
 Generator: I used a data generator for Keras. The purpose is to avoid having all the image data in memory at any point in time, since for large datasets it could consume all system memory resources.
+
 Once the network is trained the model is saved to disk (model.json and model.h5) so that drive.py can load it and use it for predicting steering angles.
 
 **Attempts to reduce overfitting in the model**
