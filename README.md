@@ -2,6 +2,7 @@
 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
+# A detailed report can be found in writeup.md file
 Overview
 ---
 The project uses deep neural networks and convolutional neural networks to clone driving behavior using the simulator (link below) where you can steer a car around a track for data collection. Using this data, the model is trained, validated and tested using Keras. The image data and steering angles are used to train the  neural network model which is then used to drive the car autonomously around the track.The model will output a steering angle to an autonomous vehicle.
