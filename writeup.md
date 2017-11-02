@@ -1,4 +1,4 @@
-#**Behavioral Cloning** 
+**Behavioral Cloning** 
 
 The idea of behavioral cloning is to learn by imitation. In this project, we train a Neural Network with images from cameras in a car and their associated recorded steering angles. Once the network is trained it can be used to predict steering angles based on new images received from the simulator and use it to guide the car.
 
@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 **Data collection**
 
 The training data is recorded using Udacity's simulator.
-[image1]: ./misc/simulator.JPG "Simulator"
+![image1]: (./misc/simulator.JPG "Simulator")
 
 The simulator on record mode in training creates a folder "IMG" which contains the image data from the center, left and right. It also creates a .csv file that contains the path to these images along with its corresponding steering angle, throttle, brake and speed.
 [image2]: ./misc/drivinglog.JPG "CSVfile"
