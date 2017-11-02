@@ -19,7 +19,7 @@ The training data is recorded using Udacity's simulator.
 ![image1](./misc/simulator.JPG "Simulator")
 
 The simulator on record mode in training creates a folder "IMG" which contains the image data from the center, left and right. It also creates a .csv file that contains the path to these images along with its corresponding steering angle, throttle, brake and speed.
-[image2]./misc/drivinglog.JPG "CSVfile"
+![image2](./misc/drivinglog.JPG "CSVfile")
 
 A total of 17339 datasets were collected using the Simulator.
 
@@ -28,14 +28,14 @@ A total of 17339 datasets were collected using the Simulator.
 The following techniques were used to augment the dataset. 
 1. Used the left and right images from the dataset to train the recovery driving scenario. The dataset recorded from the simulator would have steering angle for the left and right images as to the one corresponding the center image. So, for every left image, the new steering angle is adjusted by +0.2 and for every right image the new steering angle is adjusted ny -0.2.
 
-[image3]: ./misc/center.JPG "Center Image" 
-[image4]: ./misc/left.JPG "Left Image" 
-[image5]: ./misc/right.JPG "Right Image" 
+![image3](./misc/center.JPG "Center Image" )
+![image4](./misc/left.JPG "Left Image" )
+![image5](./misc/right.JPG "Right Image") 
 
 
 2. The center, left and right images were flipped horizontally to further augment the data. The steering angle for the flipped images were set to be the negative of the non flipped images.
 
-[image6]: ./misc/flip.JPG "Flipped Image" 
+![image6](./misc/flip.JPG "Flipped Image" )
 
 The data augmentation resulted in creating a total of 104034 datasets.
 
@@ -43,8 +43,8 @@ The data augmentation resulted in creating a total of 104034 datasets.
 
 The preprocessing step consistes of resizing the images from 160x320 to 100x200 followed bu converting the BGR image that tensor flow reads in to RGB image. In addition to this step, the images are normalized by dividing the image data by 255.0 and subtracting 0.5 from it. The mean normalization step (to avoid saturation and make gradients work better) and the cropping of the image to remove the sky and hood of the car from the image is part of the network model. (Layer 1 and 2)
 
-[image7]: ./misc/beforecrop.JPG 
-[image8]: ./misc/aftercrop.JPG 
+![image7](./misc/beforecrop.JPG) 
+![image8](./misc/aftercrop.JPG) 
 
 **Neural Network Model : NVIDIA**
 
@@ -54,7 +54,7 @@ The netwok receives input images of shape (100,200,3) and falls through the lamb
 
 The neural network was implemented using the Keras API on top of TensorFlow. The below figure shows the model architecture described above.
 
-[image9]: ./misc/modelarch.JPG "Model Architecture"
+![image9](./misc/modelarch.JPG "Model Architecture")
 
 **Model training parameters**
 The neural network described above was trained using the following parameters:
